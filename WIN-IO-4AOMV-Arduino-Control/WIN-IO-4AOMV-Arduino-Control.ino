@@ -36,22 +36,4 @@ void loop()
 {
   float value = analogRead(A0);
   node.writeSingleRegister(0x40000, value);       //Writes value to 0x40000 holding register
-  // int a = digitalRead(4);                          //Reads state of push button
-  // int b = digitalRead(5);
-  // if (a == 1)
-  // {
-  //   node.writeSingleRegister(0x40001, 1);              //Writes 1 to 0x40001 holding register
-  // }
-  // else
-  // {
-  //   node.writeSingleRegister(0x40001, 0);             //Writes 0 to 0x40001 holding register
-  // }
-  // if (b == 1)
-  // {
-  //   node.writeSingleRegister(0x40002, 1);             //Writes 1 to 0x40002 holding register
-  // }
-  // else
-  // {
-  //   node.writeSingleRegister(0x40002, 0);               //Writes 0 to 0x40002 holding register
-  // }
 }
