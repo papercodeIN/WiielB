@@ -1,0 +1,1983 @@
+[
+    {
+        "id": "9ce7f3fc7a764610",
+        "type": "tab",
+        "label": "WIN-IO-4DDAM & WIN-IO-4AOMV",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0acd8769758ace86",
+        "type": "debug",
+        "z": "9ce7f3fc7a764610",
+        "name": "debug 47",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 300,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "61d498f73976b636",
+        "type": "modbus-read",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "topic": "",
+        "showStatusActivities": true,
+        "logIOActivities": false,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "0",
+        "quantity": "8",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "f4a4ac33a555fb3e",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": true,
+        "x": 130,
+        "y": 280,
+        "wires": [
+            [
+                "0acd8769758ace86",
+                "d40ca34c948c49f3",
+                "dec9ac348cea0324",
+                "4a0d066aa52eea7b",
+                "7a492780882b8895",
+                "65a236d5c2d4d42a",
+                "25112c3556d98096",
+                "49d77675648ab660",
+                "f701e2ca0d6576d5"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "f1ef88a0ddc38d35",
+        "type": "ui_led",
+        "z": "9ce7f3fc7a764610",
+        "order": 6,
+        "group": "71b14cb435a8fee7",
+        "width": "3",
+        "height": "1",
+        "label": "Sensor",
+        "labelPlacement": "right",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": false,
+        "name": "DI1",
+        "x": 570,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "d40ca34c948c49f3",
+        "type": "change",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[4]",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 80,
+        "wires": [
+            [
+                "bff3aa7176e61580"
+            ]
+        ]
+    },
+    {
+        "id": "dec9ac348cea0324",
+        "type": "change",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[5]",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 140,
+        "wires": [
+            [
+                "4e01e07872f67602"
+            ]
+        ]
+    },
+    {
+        "id": "4e01e07872f67602",
+        "type": "ui_led",
+        "z": "9ce7f3fc7a764610",
+        "order": 6,
+        "group": "71b14cb435a8fee7",
+        "width": "3",
+        "height": "1",
+        "label": "DI2",
+        "labelPlacement": "right",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": false,
+        "name": "DI2",
+        "x": 530,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "4a0d066aa52eea7b",
+        "type": "change",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[6]",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 200,
+        "wires": [
+            [
+                "65e32aa2d5fbc02c"
+            ]
+        ]
+    },
+    {
+        "id": "65e32aa2d5fbc02c",
+        "type": "ui_led",
+        "z": "9ce7f3fc7a764610",
+        "order": 6,
+        "group": "71b14cb435a8fee7",
+        "width": "3",
+        "height": "1",
+        "label": "DI3",
+        "labelPlacement": "right",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": false,
+        "name": "DI3",
+        "x": 530,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "7a492780882b8895",
+        "type": "change",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[7]",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 260,
+        "wires": [
+            [
+                "9e279fe5127d1895"
+            ]
+        ]
+    },
+    {
+        "id": "9e279fe5127d1895",
+        "type": "ui_led",
+        "z": "9ce7f3fc7a764610",
+        "order": 6,
+        "group": "71b14cb435a8fee7",
+        "width": "3",
+        "height": "1",
+        "label": "DI4",
+        "labelPlacement": "right",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": false,
+        "name": "DI4",
+        "x": 530,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "74a507e8a678d1b0",
+        "type": "ui_switch",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "label": "Green",
+        "tooltip": "",
+        "group": "2c6d5e42a7315927",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 750,
+        "y": 80,
+        "wires": [
+            [
+                "ee30e9de1f0ab9a9"
+            ]
+        ]
+    },
+    {
+        "id": "1ead1bcf966d7bcf",
+        "type": "ui_switch",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "label": "Red",
+        "tooltip": "",
+        "group": "2c6d5e42a7315927",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 750,
+        "y": 140,
+        "wires": [
+            [
+                "2fb6b850ee620612"
+            ]
+        ]
+    },
+    {
+        "id": "e2872c1ffbfe672b",
+        "type": "ui_switch",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "label": "DO3",
+        "tooltip": "",
+        "group": "2c6d5e42a7315927",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 750,
+        "y": 200,
+        "wires": [
+            [
+                "5479f9ba2d0d3b87"
+            ]
+        ]
+    },
+    {
+        "id": "4058d221efca55ab",
+        "type": "ui_switch",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "label": "DO4",
+        "tooltip": "",
+        "group": "2c6d5e42a7315927",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 750,
+        "y": 260,
+        "wires": [
+            [
+                "d837cb5e570d0920"
+            ]
+        ]
+    },
+    {
+        "id": "ee30e9de1f0ab9a9",
+        "type": "modbus-write",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "0",
+        "quantity": "1",
+        "server": "f4a4ac33a555fb3e",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 920,
+        "y": 80,
+        "wires": [
+            [
+                "a88aca3608bed4fb"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "a88aca3608bed4fb",
+        "type": "debug",
+        "z": "9ce7f3fc7a764610",
+        "name": "debug 48",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "2fb6b850ee620612",
+        "type": "modbus-write",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "1",
+        "quantity": "1",
+        "server": "f4a4ac33a555fb3e",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 920,
+        "y": 140,
+        "wires": [
+            [
+                "17e9e4c426e0f814"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "5479f9ba2d0d3b87",
+        "type": "modbus-write",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "2",
+        "quantity": "1",
+        "server": "f4a4ac33a555fb3e",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 920,
+        "y": 200,
+        "wires": [
+            [
+                "a4d06dce84e1b15d"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "d837cb5e570d0920",
+        "type": "modbus-write",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "3",
+        "quantity": "1",
+        "server": "f4a4ac33a555fb3e",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 920,
+        "y": 260,
+        "wires": [
+            [
+                "bf1c4eee42fe1438"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "17e9e4c426e0f814",
+        "type": "debug",
+        "z": "9ce7f3fc7a764610",
+        "name": "debug 49",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "a4d06dce84e1b15d",
+        "type": "debug",
+        "z": "9ce7f3fc7a764610",
+        "name": "debug 50",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "bf1c4eee42fe1438",
+        "type": "debug",
+        "z": "9ce7f3fc7a764610",
+        "name": "debug 51",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "4c70432e848be83b",
+        "type": "ui_led",
+        "z": "9ce7f3fc7a764610",
+        "order": 6,
+        "group": "9582d10bfaa6e4c3",
+        "width": "3",
+        "height": "1",
+        "label": "Green LED",
+        "labelPlacement": "right",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": false,
+        "name": "DO1",
+        "x": 530,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "65a236d5c2d4d42a",
+        "type": "change",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[0]",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 320,
+        "wires": [
+            [
+                "4c70432e848be83b"
+            ]
+        ]
+    },
+    {
+        "id": "25112c3556d98096",
+        "type": "change",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[1]",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 380,
+        "wires": [
+            [
+                "f13d74b0660ee857"
+            ]
+        ]
+    },
+    {
+        "id": "f13d74b0660ee857",
+        "type": "ui_led",
+        "z": "9ce7f3fc7a764610",
+        "order": 6,
+        "group": "9582d10bfaa6e4c3",
+        "width": "3",
+        "height": "1",
+        "label": "Red LED",
+        "labelPlacement": "right",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": false,
+        "name": "DO2",
+        "x": 530,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "49d77675648ab660",
+        "type": "change",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[2]",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 440,
+        "wires": [
+            [
+                "cc6ec068a5a5833f"
+            ]
+        ]
+    },
+    {
+        "id": "cc6ec068a5a5833f",
+        "type": "ui_led",
+        "z": "9ce7f3fc7a764610",
+        "order": 6,
+        "group": "9582d10bfaa6e4c3",
+        "width": "3",
+        "height": "1",
+        "label": "D03",
+        "labelPlacement": "right",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": false,
+        "name": "D03",
+        "x": 530,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "f701e2ca0d6576d5",
+        "type": "change",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[3]",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 500,
+        "wires": [
+            [
+                "d1122167d6bad375"
+            ]
+        ]
+    },
+    {
+        "id": "d1122167d6bad375",
+        "type": "ui_led",
+        "z": "9ce7f3fc7a764610",
+        "order": 6,
+        "group": "9582d10bfaa6e4c3",
+        "width": "3",
+        "height": "1",
+        "label": "DO4",
+        "labelPlacement": "right",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": false,
+        "name": "DO4",
+        "x": 530,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "8b640d0c30ad78ed",
+        "type": "ui_chart",
+        "z": "9ce7f3fc7a764610",
+        "name": "AI1",
+        "group": "09a6d5de975914e9",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "label": "AI1",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1090,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7922f36779b0f3b1",
+        "type": "ui_chart",
+        "z": "9ce7f3fc7a764610",
+        "name": "AI2",
+        "group": "09a6d5de975914e9",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "label": "AI2",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1090,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2c876fcc4fc3e733",
+        "type": "ui_chart",
+        "z": "9ce7f3fc7a764610",
+        "d": true,
+        "name": "AI3",
+        "group": "09a6d5de975914e9",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "label": "AI3",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1090,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b08450c562aaec2b",
+        "type": "ui_chart",
+        "z": "9ce7f3fc7a764610",
+        "d": true,
+        "name": "AI4",
+        "group": "09a6d5de975914e9",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "label": "AI4",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1090,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f0cb39b84eb794f2",
+        "type": "ui_chart",
+        "z": "9ce7f3fc7a764610",
+        "name": "AO1",
+        "group": "f5d47681501f824a",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "label": "AO1",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "10",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1230,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b056c666ec7418fa",
+        "type": "ui_chart",
+        "z": "9ce7f3fc7a764610",
+        "name": "AO2",
+        "group": "f5d47681501f824a",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "label": "AO2",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "10",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1230,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "81ea823df4191967",
+        "type": "ui_chart",
+        "z": "9ce7f3fc7a764610",
+        "d": true,
+        "name": "AO3",
+        "group": "f5d47681501f824a",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "label": "AO3",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "10",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1230,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1adf087d3b1445e6",
+        "type": "ui_chart",
+        "z": "9ce7f3fc7a764610",
+        "d": true,
+        "name": "AO4",
+        "group": "f5d47681501f824a",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "label": "AO4",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "10",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1230,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8e7d2119329857ef",
+        "type": "ui_numeric",
+        "z": "9ce7f3fc7a764610",
+        "name": "AO1",
+        "label": "DC Volt Meter [AO1]",
+        "tooltip": "",
+        "group": "37050f2adf680c3d",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "8",
+        "step": ".5",
+        "className": "",
+        "x": 90,
+        "y": 560,
+        "wires": [
+            [
+                "54678a45235ad244"
+            ]
+        ]
+    },
+    {
+        "id": "523ae957e915ecec",
+        "type": "modbus-write",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "8",
+        "dataType": "HoldingRegister",
+        "adr": "1",
+        "quantity": "1",
+        "server": "f4a4ac33a555fb3e",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 420,
+        "y": 620,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "bbc21e8892f4555b",
+        "type": "modbus-write",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "8",
+        "dataType": "HoldingRegister",
+        "adr": "2",
+        "quantity": "1",
+        "server": "f4a4ac33a555fb3e",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 420,
+        "y": 680,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "236964111effec58",
+        "type": "modbus-write",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "8",
+        "dataType": "HoldingRegister",
+        "adr": "3",
+        "quantity": "1",
+        "server": "f4a4ac33a555fb3e",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 420,
+        "y": 740,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e3d6523abb652735",
+        "type": "ui_numeric",
+        "z": "9ce7f3fc7a764610",
+        "name": "AO2",
+        "label": "AO2",
+        "tooltip": "",
+        "group": "37050f2adf680c3d",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "8",
+        "step": ".5",
+        "className": "",
+        "x": 90,
+        "y": 620,
+        "wires": [
+            [
+                "2d4715a0f38c9426"
+            ]
+        ]
+    },
+    {
+        "id": "22d51d2d5b5d5c59",
+        "type": "ui_numeric",
+        "z": "9ce7f3fc7a764610",
+        "name": "AO3",
+        "label": "AO3",
+        "tooltip": "",
+        "group": "37050f2adf680c3d",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "8",
+        "step": ".5",
+        "className": "",
+        "x": 90,
+        "y": 680,
+        "wires": [
+            [
+                "f1cc0f038e79470d"
+            ]
+        ]
+    },
+    {
+        "id": "6ca0a7d90d487cae",
+        "type": "ui_numeric",
+        "z": "9ce7f3fc7a764610",
+        "name": "AO4",
+        "label": "AO4",
+        "tooltip": "",
+        "group": "37050f2adf680c3d",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "8",
+        "step": ".5",
+        "className": "",
+        "x": 90,
+        "y": 740,
+        "wires": [
+            [
+                "e35d24757e6f0805"
+            ]
+        ]
+    },
+    {
+        "id": "54678a45235ad244",
+        "type": "function",
+        "z": "9ce7f3fc7a764610",
+        "name": "F1",
+        "func": "// Define the scaling factor\nconst scalingFactor = 125.7; // (10 V / 125 raw count)\n\n// Input value (raw count, 1 V = 125)\nconst rawCount = msg.payload;\n\n// Calculate the scaled value\nconst scaledValue = rawCount * scalingFactor;\n\n// Create an output message with the scaled value\nmsg.payload = scaledValue;\n\n// Send the message to the next node\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 560,
+        "wires": [
+            [
+                "a1060ff0c626a702"
+            ]
+        ]
+    },
+    {
+        "id": "2d4715a0f38c9426",
+        "type": "function",
+        "z": "9ce7f3fc7a764610",
+        "name": "F2",
+        "func": "// Define the scaling factor\nconst scalingFactor = 125.7; // (10 V / 125 raw count)\n\n// Input value (raw count, 1 V = 125)\nconst rawCount = msg.payload;\n\n// Calculate the scaled value\nconst scaledValue = rawCount * scalingFactor;\n\n// Create an output message with the scaled value\nmsg.payload = scaledValue;\n\n// Send the message to the next node\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 620,
+        "wires": [
+            [
+                "523ae957e915ecec"
+            ]
+        ]
+    },
+    {
+        "id": "f1cc0f038e79470d",
+        "type": "function",
+        "z": "9ce7f3fc7a764610",
+        "name": "F3",
+        "func": "// Define the scaling factor\nconst scalingFactor = 125.7; // (10 V / 125 raw count)\n\n// Input value (raw count, 1 V = 125)\nconst rawCount = msg.payload;\n\n// Calculate the scaled value\nconst scaledValue = rawCount * scalingFactor;\n\n// Create an output message with the scaled value\nmsg.payload = scaledValue;\n\n// Send the message to the next node\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 680,
+        "wires": [
+            [
+                "bbc21e8892f4555b"
+            ]
+        ]
+    },
+    {
+        "id": "e35d24757e6f0805",
+        "type": "function",
+        "z": "9ce7f3fc7a764610",
+        "name": "F4",
+        "func": "// Define the scaling factor\nconst scalingFactor = 125.7; // (10 V / 125 raw count)\n\n// Input value (raw count, 1 V = 125)\nconst rawCount = msg.payload;\n\n// Calculate the scaled value\nconst scaledValue = rawCount * scalingFactor;\n\n// Create an output message with the scaled value\nmsg.payload = scaledValue;\n\n// Send the message to the next node\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 740,
+        "wires": [
+            [
+                "236964111effec58"
+            ]
+        ]
+    },
+    {
+        "id": "bff3aa7176e61580",
+        "type": "Invert",
+        "z": "9ce7f3fc7a764610",
+        "name": "Invert",
+        "x": 470,
+        "y": 40,
+        "wires": [
+            [
+                "f1ef88a0ddc38d35"
+            ]
+        ]
+    },
+    {
+        "id": "3b641bd338865cb4",
+        "type": "modbus-read",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "topic": "",
+        "showStatusActivities": true,
+        "logIOActivities": false,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "8",
+        "dataType": "HoldingRegister",
+        "adr": "0",
+        "quantity": "4",
+        "rate": "5",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "f4a4ac33a555fb3e",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": true,
+        "x": 710,
+        "y": 440,
+        "wires": [
+            [
+                "5278da52223224c3",
+                "cd03aad76fc27e1a",
+                "4baa3e324227de82",
+                "3942c201a641ea65"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "5278da52223224c3",
+        "type": "change",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[0]",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 910,
+        "y": 380,
+        "wires": [
+            [
+                "02b4b7f9c6d9b151"
+            ]
+        ]
+    },
+    {
+        "id": "02b4b7f9c6d9b151",
+        "type": "calculator",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "div",
+        "constant": "125.7",
+        "round": false,
+        "truncate": false,
+        "decimals": 0,
+        "decimals2": 0,
+        "x": 1090,
+        "y": 380,
+        "wires": [
+            [
+                "f0cb39b84eb794f2"
+            ]
+        ]
+    },
+    {
+        "id": "cd03aad76fc27e1a",
+        "type": "change",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[1]",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 910,
+        "y": 420,
+        "wires": [
+            [
+                "37370343c670761e"
+            ]
+        ]
+    },
+    {
+        "id": "37370343c670761e",
+        "type": "calculator",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "div",
+        "constant": "125.7",
+        "round": false,
+        "truncate": false,
+        "decimals": 0,
+        "decimals2": 0,
+        "x": 1090,
+        "y": 420,
+        "wires": [
+            [
+                "b056c666ec7418fa"
+            ]
+        ]
+    },
+    {
+        "id": "4baa3e324227de82",
+        "type": "change",
+        "z": "9ce7f3fc7a764610",
+        "d": true,
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[2]",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 910,
+        "y": 460,
+        "wires": [
+            [
+                "ca7374c42a89bb49"
+            ]
+        ]
+    },
+    {
+        "id": "ca7374c42a89bb49",
+        "type": "calculator",
+        "z": "9ce7f3fc7a764610",
+        "d": true,
+        "name": "",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "div",
+        "constant": "125.7",
+        "round": false,
+        "truncate": false,
+        "decimals": 0,
+        "decimals2": 0,
+        "x": 1090,
+        "y": 460,
+        "wires": [
+            [
+                "81ea823df4191967"
+            ]
+        ]
+    },
+    {
+        "id": "3942c201a641ea65",
+        "type": "change",
+        "z": "9ce7f3fc7a764610",
+        "d": true,
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[3]",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 910,
+        "y": 500,
+        "wires": [
+            [
+                "5e460e7c735c6908"
+            ]
+        ]
+    },
+    {
+        "id": "5e460e7c735c6908",
+        "type": "calculator",
+        "z": "9ce7f3fc7a764610",
+        "d": true,
+        "name": "",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "div",
+        "constant": "125.7",
+        "round": false,
+        "truncate": false,
+        "decimals": 0,
+        "decimals2": 0,
+        "x": 1090,
+        "y": 500,
+        "wires": [
+            [
+                "1adf087d3b1445e6"
+            ]
+        ]
+    },
+    {
+        "id": "848d3b6fea47d076",
+        "type": "modbus-read",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "topic": "",
+        "showStatusActivities": true,
+        "logIOActivities": false,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "1",
+        "quantity": "5",
+        "rate": "6",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "f4a4ac33a555fb3e",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": true,
+        "x": 650,
+        "y": 660,
+        "wires": [
+            [
+                "753fcfebeae09fea",
+                "9dca1ab0a43e356a",
+                "df6b5aaeee277c3f",
+                "e49cc615dfdcc199"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "a1060ff0c626a702",
+        "type": "modbus-write",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "8",
+        "dataType": "HoldingRegister",
+        "adr": "0",
+        "quantity": "1",
+        "server": "f4a4ac33a555fb3e",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 420,
+        "y": 560,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "753fcfebeae09fea",
+        "type": "change",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[0]",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 600,
+        "wires": [
+            [
+                "8b640d0c30ad78ed"
+            ]
+        ]
+    },
+    {
+        "id": "9dca1ab0a43e356a",
+        "type": "change",
+        "z": "9ce7f3fc7a764610",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[1]",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 640,
+        "wires": [
+            [
+                "7922f36779b0f3b1"
+            ]
+        ]
+    },
+    {
+        "id": "df6b5aaeee277c3f",
+        "type": "change",
+        "z": "9ce7f3fc7a764610",
+        "d": true,
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[2]",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 680,
+        "wires": [
+            [
+                "2c876fcc4fc3e733"
+            ]
+        ]
+    },
+    {
+        "id": "e49cc615dfdcc199",
+        "type": "change",
+        "z": "9ce7f3fc7a764610",
+        "d": true,
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[3]",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 720,
+        "wires": [
+            [
+                "b08450c562aaec2b"
+            ]
+        ]
+    },
+    {
+        "id": "f4a4ac33a555fb3e",
+        "type": "modbus-client",
+        "name": "4DI-4DDAM",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": true,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "192.168.1.200",
+        "tcpPort": "4196",
+        "tcpType": "DEFAULT",
+        "serialPort": "COM3",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "71b14cb435a8fee7",
+        "type": "ui_group",
+        "name": "Digital Input Status",
+        "tab": "99bb9f29753326a8",
+        "order": 1,
+        "disp": true,
+        "width": "4",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2c6d5e42a7315927",
+        "type": "ui_group",
+        "name": "Digital Output",
+        "tab": "99bb9f29753326a8",
+        "order": 4,
+        "disp": true,
+        "width": "4",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9582d10bfaa6e4c3",
+        "type": "ui_group",
+        "name": "Digital Output Status",
+        "tab": "99bb9f29753326a8",
+        "order": 3,
+        "disp": true,
+        "width": "4",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "09a6d5de975914e9",
+        "type": "ui_group",
+        "name": "Analog Input Trends",
+        "tab": "99bb9f29753326a8",
+        "order": 6,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f5d47681501f824a",
+        "type": "ui_group",
+        "name": "Analog Output Trends",
+        "tab": "99bb9f29753326a8",
+        "order": 7,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "37050f2adf680c3d",
+        "type": "ui_group",
+        "name": "Analog Output",
+        "tab": "99bb9f29753326a8",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "99bb9f29753326a8",
+        "type": "ui_tab",
+        "name": "WittelB - Modbus I/O",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
