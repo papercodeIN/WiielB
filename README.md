@@ -1,6 +1,7 @@
 # WiielB
 
-"
+### Repository File Structure
+```markdown
 ├───Datasheet
 │       Wittelb WIN-IO-4AOMV Data Sheet v1.pdf
 │       Wittelb WIN-IO-4DDAM CE Data Sheet v1.pdf
@@ -43,4 +44,4 @@
     │
     └───Python
             Controlling WIN-IO-4DDAM from Python.ipynb
-"
+```
