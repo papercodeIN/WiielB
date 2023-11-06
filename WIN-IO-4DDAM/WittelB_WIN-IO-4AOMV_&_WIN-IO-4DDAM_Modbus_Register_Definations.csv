@@ -1,0 +1,5 @@
+10
+DO_,1,4,false,1,Coil,1
+DI_,1,4,false,1,Coil,5
+AI_,1,4,false,1,HoldingRegister,2
+AO_,1,4,false,8,HoldingRegister,1
