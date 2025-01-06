@@ -1,4 +1,4 @@
-# WiielB
+# WittelB
 
 - Buy Augmatic Technologies Private Limited Products here : [Visit Website](https://www.wittelb.com/)
 
